@@ -12,14 +12,26 @@ function Login(props) {
     }
 
     return (
-        <div>
-            <h1>Login Form</h1>
-            <form onSubmit={handleSubmit}>
-                Username: <input type='text' name='username' id='username' /><br />
-                Password: <input type='password' name='password' id='password' />
-                <input type='submit' value='Login' />
-            </form>
-        </div>
+        <div className='pri'>
+            <div className='wrapper'>
+                <h1>Login Form</h1>
+                <form onSubmit={handleSubmit}>
+
+                    <div className='container'>
+                        <label htmlFor="username"> <b>Username </b></label>
+                        <input type="text" name='username' id='username' required />
+
+                        <label htmlFor="password"> <b>Password</b></label>
+                        <input type="password" name='password' id='password' required />
+
+                        <button type='submit'>Login</button>
+                    </div>
+
+                </form>
+
+            </div>
+    
+        </div >
     )
 }
 
