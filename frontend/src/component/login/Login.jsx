@@ -1,14 +1,32 @@
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function Login(props) {
+    const navigate = useNavigate();
+    async function handleSubmit(event) {
 
-    function handleSubmit(event) {
         event.preventDefault();
-        console.log(event.target);
-        console.log(event.target.username);
-        console.log(event.target.username.value);
-        console.log(event.target.password);
-        console.log(event.target.password.value);
+        let user = {
+            username: event.target.username.value,
+            password: event.target.password.value
+        }
+
+        let backend_url = 'http://localhost:3200/login';
+        let options = {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(user)
+        }
+        let response = await fetch(backend_url, options);
+        let responseData = await response.json();
+
+        if (responseData.flag === true) {
+            navigate('/resturant');
+        }
+        else {
+            alert(responseData.msg);
+        }
     }
 
     return (
@@ -30,9 +48,9 @@ function Login(props) {
                 </form>
 
             </div>
-    
+
         </div >
-    )
+    );
 }
 
 export default Login;
