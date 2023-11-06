@@ -6,3 +6,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.food-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    display: flex;
+}
