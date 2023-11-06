@@ -13,10 +13,13 @@ function Resturant(props) {
         let backend_url = 'http://localhost:3200/data';
         let response = await fetch(backend_url);
 
-        console.log(response);
         let responseData = await response.json();
 
-        console.log(responseData);
+        setMenuData = {
+            flag: false,
+            foodData: responseData[0],
+            drinkData: responseData[1]
+        };
     }
 
     useEffect(() => {
