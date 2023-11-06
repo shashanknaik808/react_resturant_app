@@ -15,20 +15,22 @@ function Resturant(props) {
 
         let responseData = await response.json();
 
-        setMenuData = {
-            flag: false,
-            foodData: responseData[0],
-            drinkData: responseData[1]
-        };
+        // setMenuData = {
+        //     flag: true,
+        //     foodData: responseData[0],
+        //     drinkData: responseData[1]
+        // };
     }
 
     useEffect(() => {
         getData();
     }, []);
 
+    let arr = ['sateesh', 'rathna', 'shashank', 'sharvani'];
+
     return (
         <div>
-            <h1>Resturant Component</h1>
+            <h1>{arr}</h1>
         </div>
     )
 }
