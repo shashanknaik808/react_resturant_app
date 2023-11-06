@@ -30,15 +30,8 @@ function Resturant(props) {
     return (
         <div className='pri'>
             <div>
-                <h1> Food Menu </h1>
-                {
-                    menuData.foodData
-                }
-
-                <h1> Drink Menu </h1>
-                {
-                    menuData.drinkData
-                }
+                {menuData.flag ? <h1>{menuData.foodData[0].foodName}</h1> : <h1>Loading</h1>}
+                {menuData.flag ? <h1>{menuData.drinkData[0].drinkName}</h1> : <h1>Loading</h1>}
             </div>
         </div>
     )
