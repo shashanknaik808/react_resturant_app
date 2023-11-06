@@ -32,6 +32,11 @@
     margin: 20px;
 }
 
+.food-item img {
+    max-width: 100%;
+    height: auto;
+}
+
 .veg {
     background-color: rgb(206, 255, 206);
 }
