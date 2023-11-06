@@ -15,9 +15,14 @@
     display: flex;
 }
 
-.drink-container{
+.drink-container {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     display: flex;
+}
+
+.food-item {
+    border: 2px solid rgb(37, 37, 37);
+    margin: 20px;
 }
