@@ -15,11 +15,11 @@ function Resturant(props) {
 
         let responseData = await response.json();
 
-        setMenuData = {
+        setMenuData ({
             flag: true,
             foodData: responseData[0],
             drinkData: responseData[1]
-        };
+        });
     }
 
     useEffect(() => {
