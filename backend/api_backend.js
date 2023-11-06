@@ -20,6 +20,25 @@ app.post("/login", (req, res) => {
     }
 });
 
+let foodData = [
+    { foodName: 'French Fries', price: 'Rs.250/', catogory: 'veg' },
+    { foodName: 'Tandoori Mushrooms', price: 'Rs.450/', catogory: 'veg' },
+    { foodName: 'Chicken Alfaham', price: 'Rs.550/', catogory: 'non-veg' },
+    { foodName: 'French Fries', price: 'Rs.650/', catogory: 'non-veg' },
+];
+
+let drinkData = [
+    { drinkName: 'Virgin Mojito', price: 'Rs.250/', catogory: 'mocktail' },
+    { drinkName: 'Pinacolada', price: 'Rs.350/', catogory: 'mocktail' },
+    { drinkName: 'Sex on the Beach', price: 'Rs.550/', catogory: 'cocktail' },
+    { drinkName: 'Moscow Mule', price: 'Rs.650/', catogory: 'cocktail' },
+];
+
+let data = [foodData, drinkData];
+app.get('/data', (req, res) => {
+    res.json(data);
+});
+
 app.listen(3200, () => {
     console.log("Backend application is running at port 3200");
 });
