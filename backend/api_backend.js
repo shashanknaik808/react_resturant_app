@@ -23,8 +23,8 @@ app.post("/login", (req, res) => {
 let foodData = [
     { foodName: 'French Fries', price: 'Rs.250/', catogory: 'veg' },
     { foodName: 'Tandoori Mushrooms', price: 'Rs.450/', catogory: 'veg' },
-    { foodName: 'Chicken Alfaham', price: 'Rs.550/', catogory: 'non-veg' },
-    { foodName: 'French Fries', price: 'Rs.650/', catogory: 'non-veg' },
+    { foodName: 'Chicken Alabu', price: 'Rs.550/', catogory: 'non-veg' },
+    { foodName: 'Dragon Prawns', price: 'Rs.650/', catogory: 'non-veg' },
 ];
 
 let drinkData = [
