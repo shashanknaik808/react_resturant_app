@@ -3,6 +3,11 @@ import './Resturant.css';
 
 function Resturant(props) {
 
+    const [menuData, setMenuData] = useState({
+        flag: false,
+        foodData: null,
+        drinkData: null
+    });
 
     async function getData() {
         let backend_url = 'http://localhost:3200/data';
@@ -14,6 +19,9 @@ function Resturant(props) {
         console.log(responseData);
     }
 
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <div>
