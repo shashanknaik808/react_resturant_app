@@ -10,7 +10,7 @@ body {
     background: linear-gradient(#d3ebff, #fff0d3);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 120vh;
+    background-size: cover;
 
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@ input[type=password] {
 }
 
 button {
-    background-color: blue;
+    background-color: red;
     color: white;
     padding: 14px 20px;
     margin: 8px 0px;
