@@ -51,21 +51,32 @@ function Resturant(props) {
                                         <Button varient="primary">Buy Now</Button>
                                     </Card.Body>
                                 </Card>
-                            })
-                            : (<h2>Loading</h2>)
+                            }) : (<h2>Loading</h2>)
                     }
                 </div>
 
 
                 <h1>Drink Menu</h1>
-                {
-                    menuData.flag ?
-                        menuData.drinkData.map(item => {
-                            return <li key={item.drinkName}>
-                                Drink Name is {item.drinkName}, Price: {item.price}, Catogary: {item.catogory}
-                            </li>
-                        }) : <h1>Loading</h1>
-                }
+                <div className='drink-container'>
+                    {
+                        menuData.flag ?
+                            menuData.drinkData.map(item => {
+                                return <Card className='drink-item' style={{ width: '18rem' }} key={item.drinkName}>
+                                    <Card.Img variant="top" src={'images/drink/' + item.drinkName + '.jpg'} />
+                                    <Card.Body className={(item.catogory == 'mocktail') ? 'mocktail' : 'cocktail'}>
+                                        <Card.Title>{item.drinkName} : {item.price} </Card.Title>
+                                        <Card.Text>
+                                            {item.drinkName} is an amazing Drink. You should try it.
+                                        </Card.Text>
+                                        <Card.Text>
+                                            Catogory: {item.catogory}
+                                        </Card.Text>
+                                        <Button varient="primary">Buy Now</Button>
+                                    </Card.Body>
+                                </Card>
+                            }) : <h1>Loading</h1>
+                    }
+                </div>
 
             </div >
         </div >
