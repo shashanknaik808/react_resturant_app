@@ -47,3 +47,16 @@
 .mocktail {
     background-color: rgb(255, 246, 195);
 }
+
+button {
+    background-color: blue;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
